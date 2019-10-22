@@ -1,0 +1,7 @@
+*.out
+*.a
+*.o
+dist/
+build/
+targets/
+node-*.gz

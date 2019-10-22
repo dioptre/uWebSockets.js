@@ -100,9 +100,9 @@ int main() {
           "x64");
 #else
     /* Linux */
-    build("clang",
-          "clang++",
-          "-static-libstdc++ -static-libgcc -s",
+    build("clang -g",
+          "clang++ -g",
+          "-static-libstdc++ -static-libgcc -s -g",
           OS,
           "x64");
 
