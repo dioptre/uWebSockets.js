@@ -100,8 +100,8 @@ int main() {
           "x64");
 #else
     /* Linux */
-    build("clang -g",
-          "clang++ -g",
+    build("clang -fsanitize=address -O1 -fno-omit-frame-pointer -g",
+          "clang++ -fsanitize=address -O1 -fno-omit-frame-pointer -g",
           "-static-libstdc++ -static-libgcc -s -g",
           OS,
           "x64");
