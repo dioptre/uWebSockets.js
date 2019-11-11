@@ -94,8 +94,8 @@ int main() {
 #else
 #ifdef IS_MACOS
     /* Apple special case */
-    build("clang -mmacosx-version-min=10.7",
-          "clang++ -stdlib=libc++ -mmacosx-version-min=10.7",
+    build("IPHONEOS_DEPLOYMENT_TARGET= SDKROOT= clang -mmacosx-version-min=10.7",
+          "IPHONEOS_DEPLOYMENT_TARGET= SDKROOT= clang++ -stdlib=libc++ -mmacosx-version-min=10.7",
           "-undefined dynamic_lookup",
           OS,
           "x64");
